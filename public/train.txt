@@ -1,0 +1,29 @@
+# Sample email addresses
+example@example.com
+contact@domain.com
+info@company.org
+
+# Sample phone numbers
++1-800-555-1234
++44 20 7946 0958
+555-0123
+
+# Sample dates
+2024-08-29
+08/29/2024
+29-Aug-2024
+
+# Sample URLs
+https://www.example.com
+http://sub.domain.org
+www.test-site.net
+
+# Sample addresses
+123 Main St, Anytown, USA
+456 Elm St, Springfield, IL
+789 Maple Ave, Metropolis, NY
+
+# Sample names
+John Doe
+Jane Smith
+Emily Davis
