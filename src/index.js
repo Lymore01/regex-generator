@@ -1,11 +1,14 @@
-const FileService = require("../src/services/fileServices");
+const classifyInput = require("../src/services/nlpServices");
+const regexService = require("../src/services/regexServices");
 
-class GenerateRegex {
-  generate(file) {
-    const data = new FileService().read(file);
-    return data;
-    // pass the data to the ai models
-  }
-}
-
-new GenerateRegex().generate("hello")
+classifyInput(process.argv)
+  .then(async (data) => {
+    try {
+      let generatedRegex = await regexService.generate(data.input, data.output);
+      console.log(data.output);
+      console.log(`Generated regex: ${generatedRegex}`);
+    } catch (error) {
+      console.error("Error generating regex:", error);
+    }
+  })
+  .catch((error) => console.error("Error classifying input:", error));

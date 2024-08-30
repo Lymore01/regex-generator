@@ -33,16 +33,8 @@ class RegexService {
   }
 }
 
-const val = new RegexService();
+const regexService = new RegexService();
 
-classifyInput("2-4-2024")
-  .then(async (data) => {
-    try {
-      let generatedRegex = await val.generate(data.input, data.output);
-      console.log(data.output);
-      console.log(`Generated regex: ${generatedRegex}`);
-    } catch (error) {
-      console.error("Error generating regex:", error);
-    }
-  })
-  .catch((error) => console.error("Error classifying input:", error));
+module.exports = regexService;
+
+
